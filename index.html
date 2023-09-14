@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/7181138a5c.js" crossorigin="anonymous">
+
+        // Function to hide the .crightbody content
+        function hideCrightbody() {
+            const crightbody = document.getElementById("bodyname");
+            crightbody.style.display = "none";
+        }
+
+        // Function to show the .crightbody content
+        function showCrightbody() {
+            const crightbody = document.getElementById("bodyname");
+            crightbody.style.display = "block";
+        }
+
+        // Listen for the iframe load event
+        const iframe = document.querySelector('iframe[name="box"]');
+        iframe.addEventListener("load", hideCrightbody);
+
+
+        // You can also listen for a specific event to show the content again if needed
+        // For example, if you want to show it when the iframe content is clicked:
+        iframe.contentWindow.document.addEventListener("click", showCrightbody);
+
+    </script>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            overflow: hidden;
+             user-select:none;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh ;
+
+        }
+
+        .cleft {
+            background-color:#001219;
+            width: 15%;
+            color: white;
+           
+        }
+
+        .cright {
+            width: 85%;
+            background-image: url(portbg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: unset;
+            display: flex;
+            position: relative;
+
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            margin-left: 4rem;
+            border-radius: 50%;
+            margin-top: 2rem;
+            border: 3px solid white;
+        }
+
+        .name {
+            margin-top: 2rem;
+            margin-left:3rem;
+            font-size: 20px;
+        }
+
+        .icon {
+            display: flex;
+            margin-left:1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .icon p a
+        {
+            padding: 20px;
+            margin-left: px;
+        }
+
+       
+
+       
+
+        li {
+            margin-bottom: 3rem;
+            margin-left: 4rem;
+        }
+
+        a {
+            color: white;
+        }
+
+        .crightbody {
+
+            color: black;
+            position: absolute;
+            margin-top: 300px;
+            margin-left: 370px;
+            left: 0%;
+            top: 0%;
+
+
+        }
+
+        .bodyname {
+            font-size: 30px;
+        }
+        i{
+          font-size: 30px;
+        }
+        .navlist p{
+            display: flex;
+        }
+    
+
+
+
+
+
+
+
+
+
+
+/* ===========================================MEDIA SCREEN================================== */
+
+@media screen and (min-width: 768px) {
+
+
+
+}
+
+
+/* =========================================================================== */
+@media screen and (min-width: 480px) {
+
+
+}
+
+/* =========================================================================== */
+
+@media screen and (max-width: 320px) {
+
+  .cleft{
+
+    margin:0;
+    padding:10px;
+    width: 70px;
+  }
+  
+  img{
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+  
+  }
+        .image{
+        margin: 0%;
+        padding: 0%;
+        }
+        .navlist{
+          margin: 0%;
+          padding: 0%;
+        }
+        li{
+          margin: 0%;
+          padding:0%;
+          margin-top: 50px;
+        }
+        a{
+          margin: 0%;
+          padding: 0%;
+          font-size: 50px;
+          
+        }
+        i{
+          margin: 0%;
+          padding: 0;
+        margin-top:30px;
+        font-size: 20px;
+        }
+        .icon
+        {
+            margin:0;
+            padding:0;
+           
+
+        }
+        .icon p{
+             display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+            margin-bottom: 0;
+        }
+        .icon a
+        {
+            margin-top: 20px;
+        }
+        .icon p i
+        {
+            font-size: 35px;
+            
+           
+        }
+        .navlist li
+        {
+            margin-top: 20px;
+            
+        }
+        .navlist li i
+        {
+            font-size: 35px;
+            margin-left: 10px;
+        }
+        
+       .navlist p{
+          display: none;
+        }
+        .name{
+          margin: 0%;
+          padding: 0%;
+          font-size: 10px;
+          
+        }
+
+}
+
+
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cleft" id="cleft">
+            <div class="image">
+                <img src="portbg.jpg" alt="">
+            </div>
+            <div class="name" id="name">
+                <h3>NATARAJ</h3>
+            </div>
+            <div  class="icon">
+                <p>
+                    <a href="https://www.linkedin.com/mynetwork/">
+                        <i id="icon1" class="fa-brands fa-linkedin" > </i>
+                    </a>
+                    <a href="https://github.com/Natarajsiva">
+                        <i id="icon2" class="fa-brands fa-github" ></i>
+                    </a>
+                </p>
+            </div>
+            <div class="navlist">
+                <p>
+                    <li style="display: flex;"><a  onclick="changeclr('one')" href="home.html"   target="box" id="one" > <i class="fa-solid fa-house" > </i><p>Home</p></a>
+                    </li>
+                    <li><a onclick="changeclr('two')" href="about.html" target="box" id="two"><i  class="fa-sharp fa-solid fa-person"
+                                ></i><p>About</p> </a></li>
+                    <li><a onclick="changeclr('three')" href="resume.html" target="box" id="three"><i class="fa-solid fa-file"
+                                ></i><p>Resume</p></a></li>
+                    <li><a  onclick="changeclr('four')" href="contact.html" target="box"id="four"><i class="fa-solid fa-address-book"
+                            ></i><p>Contact</p></a></li>
+                </p>
+
+            </div>
+
+        </div>
+        
+
+            <iframe style="border: none;" src="home.html" name="box" height="100%" width="100%"></iframe>
+          
+
+        </div>
+
+
+    </div>
+    <script>
+
+
+        
+        function changeclr(theme)
+        {
+            let isclick = true;
+            const color=document.getElementById('cleft');
+             const questions = [
+                    'name','icon1', 'icon2', 'one', 'two', 'three', 'four'];
+                    
+            if(theme==='one')
+            {
+                 color.style.backgroundColor = '#001219';
+                for (let i = 0; i < questions.length; i++) 
+                {
+                    document.getElementById(questions[i]).style.color = '#ffffff'
+                }
+            }
+            else if(theme==='two')
+            {
+                color.style.backgroundColor = '#f1faee';      
+                for (let i = 0; i < questions.length; i++) 
+                {
+                    document.getElementById(questions[i]).style.color = '#1d3557'
+                }
+            }
+            else if(theme==='three')
+            {
+                color.style.backgroundColor ='#83c5be';
+                 for (let i = 0; i < questions.length; i++) 
+                {
+                    document.getElementById(questions[i]).style.color = '#000000'
+                }
+            }
+            else if(theme==='four')
+            {
+                 color.style.backgroundColor ='#3c6e71';
+                 for (let i = 0; i < questions.length; i++) 
+                {
+                    document.getElementById(questions[i]).style.color = '#ffffff'
+                }
+
+            }
+                
+           
+        
+          
+
+        }
+    </script>
+</body>
+
+</html>

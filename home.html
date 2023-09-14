@@ -1,0 +1,114 @@
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Document</title>
+          <style>
+            * {
+              margin: 0%;
+              padding: 0;
+              user-select:none;
+            }
+            .letter_gradian {
+              color: #9c6644;
+              font-size: 100px;
+              font-weight: 700;
+              font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+              letter-spacing: 20px;
+            }
+            body {
+              background-color: #ede0d4;
+              overflow: hidden;
+            }
+            .layer {
+              background-color: rgba(0, 0, 0, 0);
+              height: 100vh;
+              width: 100%;
+              position: absolute;
+              color: #ffffff;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+            }
+            .layer_child {
+              text-align: center;
+            
+            }
+            .layer_child h1 {
+              font-size: 90px;
+              color: white;
+
+              /* background-image: linear-gradient(45deg, #f9f9fa, #12f412,rgb(0, 153, 255));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent; */
+            }
+
+            h1 {
+              font-size: 30px;
+            }
+            @media screen and (min-width: 768px) {
+            }
+
+            /* =========================================================================== */
+            @media screen and (min-width: 480px) {
+            }
+
+            /* =========================================================================== */
+
+            @media screen and (max-width: 320px) {
+              h1 {
+                font-size: 12px;
+              }
+              body {
+                height: 100vh;
+                background-position: center;
+              }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="layer">
+            <div class="layer_child">
+              
+              <h1>NATARAJAN</h1>
+              <h1 style="margin-bottom: 40px;">WEB DEVELOPER</h1>
+              <a href="about.html">
+                <button
+                  style="
+                    background: transparent;
+                    border: none;
+                    padding: 15px;
+                    background-color: white;
+                    width: 300px;
+                    border-radius: 40px;
+                    font-size: larger;
+                    font-weight: bolder;
+                  "
+                >
+                  Start Explore About Me!
+                </button>
+              </a>
+
+            </div>
+          </div>
+          <div style="height: 100vh">
+            <video
+              width="100%"
+              height="100%"
+              style="object-fit: cover"
+              loop
+              muted
+              autoplay
+            >
+              <source
+                src="Moooi-Starfall-Light-by-Front-Waiting-for-a-star-to-Fall-Animation-no-front-bumper-no-end-bumper.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </body>
+      </html>
